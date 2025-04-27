@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Grow your business with our creative services. Small Business digital solutions.">
+  <meta property="og:title" content="Small Business Solutions">
+  <meta property="og:description" content="Grow your business with our creative services.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourgithubusername.github.io/businesssite/">
+  <title>Login | Small Business Solutions</title>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { line-height: 1.6; color: #333; background: #f0f0f0; }
+    .login-page { display: flex; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; }
+    .login-form { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.3); width: 320px; animation: fadeIn 1s ease-in; }
+    .login-form h2 { text-align: center; margin-bottom: 1rem; color: #333; }
+    .login-form input { width: 100%; padding: 0.8rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 5px; }
+    .login-form button { width: 100%; padding: 0.8rem; background: #ff7f50; color: white; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; }
+    .login-form button:hover { background: #e65b34; }
+
+    header, section, footer { display: none; }
+
+    header { background: #333; padding: 1rem 2rem; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { color: #fff; font-size: 1.5rem; font-weight: bold; }
+    nav ul { list-style: none; display: flex; }
+    nav ul li { margin-left: 2rem; }
+    nav ul li a { color: #fff; text-decoration: none; font-size: 1rem; }
+
+    .hero {
+  position: relative;
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('download.png') 
+              no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content {
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: #ff7f50;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e65b34;
+}
+
+    
+    section { padding: 4rem 2rem; text-align: center; }
+    .service-cards, .testimonial-cards, .blog-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem; }
+    .card, .testimonial, .blog { background: #f4f4f4; padding: 2rem; border-radius: 10px; width: 280px; transition: transform 0.3s; }
+    .card:hover, .testimonial:hover, .blog:hover { transform: translateY(-10px); }
+
+    .contact-form { display: flex; flex-direction: column; max-width: 500px; margin: 0 auto; gap: 1rem; }
+    .contact-form input, .contact-form textarea { padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; }
+
+    footer { background: #222; color: #ccc; text-align: center; padding: 1rem; margin-top: 2rem; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav ul { flex-direction: column; }
+      nav ul li { margin: 1rem 0; }
+      .hero h1 { font-size: 2rem; }
+      .service-cards, .testimonial-cards, .blog-cards { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-page">
+  <form class="login-form" onsubmit="return validateLogin()">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<header>
+  <nav>
+    <div class="logo">Small Business</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<section id="home" class="hero" data-aos="fade-up">
+  <div class="hero-content">
+    <h1>Grow Your Business With Us</h1>
+    <p>We provide smart solutions for your success.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </div>
+</section>
+
+
+<section id="about" data-aos="fade-right">
+  <h2>About Us</h2>
+  <p>At <strong>MyBusiness</strong>, we believe every small business deserves the chance to succeed and grow. 
+  Founded by passionate entrepreneurs, our team is dedicated to helping you achieve your goals through smart digital solutions, creative branding, and personalized strategies tailored to your unique needs.</p>
+
+  <p>We combine years of experience in technology, marketing, and business consulting to deliver results that matter. Whether you need a modern website, strong brand identity, or digital marketing to boost your online presence, we are here to be your trusted partner.</p>
+
+  <p><strong>Our Mission:</strong> Empower small businesses with the tools, technology, and strategies they need to thrive in today's competitive world.</p>
+
+  <p><strong>Our Vision:</strong> To be a leading force in creating opportunities and growth for small businesses around the globe.</p>
+</section>
+<section id="services" data-aos="fade-left">
+  <h2>Our Services</h2>
+  <div class="service-cards">
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>Modern and responsive websites tailored for your business needs.</p>
+    </div>
+    <div class="card">
+      <h3>Marketing</h3>
+      <p>Targeted digital marketing to increase your brand visibility.</p>
+    </div>
+    <div class="card">
+      <h3>Consulting</h3>
+      <p>Expert advice to help your business grow and scale up.</p>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" data-aos="zoom-in">
+  <h2>Testimonials</h2>
+  <div class="testimonial-cards">
+    <div class="testimonial">
+      <p>"Working with MyBusiness was a fantastic experience. They helped us build a modern website that truly represents our brand!"</p>
+      <h4>- Manish, Founder of Manish Enterprises</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Their digital marketing strategies helped us reach new customers faster than we ever imagined. Highly recommend their team!"</p>
+      <h4>- Vittal, CEO of Vittal Solutions</h4>
+    </div>
+    <div class="testimonial">
+      <p>"From branding to website development, they handled everything perfectly. Our business looks more professional now!"</p>
+      <h4>- Nandeesh, Director of Nandeesh Ventures</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Excellent consulting and support. They provided insights that completely changed our business growth path. Thank you!"</p>
+      <h4>- Sanketh, Managing Director at Sanketh Innovations</h4>
+    </div>
+  </div>
+</section>
+<section id="blog" data-aos="fade-up">
+  <h2>Latest Blog Posts</h2>
+  <p>Stay updated with the latest trends, tips, and strategies to grow your business smarter and faster.</p>
+
+  <div class="blog-cards">
+    <div class="blog">
+      <h3>5 Digital Trends Small Businesses Must Watch in 2025</h3>
+      <p>Discover the newest digital marketing and technology trends that can give your small business an edge in the competitive world.</p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+    <div class="blog">
+      <h3>How to Build a Strong Brand Identity</h3>
+      <p>Learn simple steps to create a memorable brand that connects with customers and makes your business stand out.</p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+    <div class="blog">
+      <h3>Top 10 Website Design Tips for 2025</h3>
+      <p>Find out what makes a website effective, user-friendly, and engaging in today’s mobile-first world with these expert tips.</p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+  </div>
+</section>
+<section id="contact" data-aos="fade-up">
+  <h2>Contact Us</h2>
+  <form action="https://formspree.io/f/{your-form-id}" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 MyBusiness. All Rights Reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  function validateLogin() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    if (username === "Pesiams6th" && password === "BCA6SecB") {
+      document.querySelector('.login-page').style.display = 'none';
+      document.querySelector('header').style.display = 'block';
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'block');
+      document.querySelector('footer').style.display = 'block';
+      document.title = "Small Business Solutions";
+      return false;
+    } else {
+      alert("Invalid Username or Password!");
+      return false;
+    }
+  }
+</script>
+
+</body>
+</html>
